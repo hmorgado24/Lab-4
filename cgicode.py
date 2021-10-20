@@ -32,7 +32,7 @@ print('<body>')
 
 print('<LED Select = " + data.getvalue("LED")> <br>')
 
-if str(stats["LED"]) == 1:
+if ('1' in stats['LED']):
   GPIO.output(ledpin1, 1)
 
 if str(stats["LED"]) == 2:

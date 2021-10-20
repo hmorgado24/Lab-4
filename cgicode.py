@@ -6,20 +6,22 @@ import RPi.GPIO as GPIO
 import cgitb
 cgitb.enable()
 
-ledpin1 = 13
-ledpin2 = 19
-ledpin3 = 26
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-GPIO.setup(ledpin1, GPIO.OUT)
-GPIO.setup(ledpin2, GPIO.OUT)
-GPIO.setup(ledpin3, GPIO.OUT)
-
 data = cgi.FieldStorage()
-L1 = data.getvalue('LED')
+LED = data.getvalue('LED')
 s1 = data.getvalue('slider1')
-stats = {"LED":L1, "slider1":s1}
+
+L1 = 0
+L2 = 0
+L3 = 0
+
+if (LED == '1'):
+  L1 = s1
+if (LED == '2'):
+  L2 = s1
+if (LED == '3'):
+  L3 = s1
+
+stats = {"LED1":L1, "LED2":L2, "LED3":L3}
 
 with open('cgicode.txt', 'w') as f:  
   json.dump(stats,f)
@@ -31,16 +33,6 @@ print('<form action="/cgi-bin/cgicode.py" method="POST">')
 print('<body>') 
 
 print('<LED Select = " + data.getvalue("LED")> <br>')
-
-if L1 == 1:
-  GPIO.output(ledpin1, 1)
-
-if str(stats["LED"]) == 2:
-  GPIO.output(ledpin2, 1)
-
-if str(stats["LED"]) == 3:
-  GPIO.output(ledpin3, 1)
-
 print('<input type="radio" name="LED" value="1"> LED 1 <br>')
 print('<input type="radio" name="LED" value="2"> LED 2 <br>')
 print('<input type="radio" name="LED" value="3"> LED 3 <br>')

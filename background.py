@@ -25,17 +25,7 @@ pwm3.start(0)
 while True:
   with open("cgicode.txt", 'r') as f:
     data = json.load(f)
-    led = str(data['LED'])
-    dutyCycle = str(data['slider1']) 
-
-  if led == 1: 
-     pwm1.ChangeDutyCycle(dutyCycle)
-     time.sleep(.1)
-
-  if led == 2: 
-    pwm2.ChangeDutyCycle(dutyCycle)
-    time.sleep(.1)
-
-  if led == 3: 
-    pwm3.ChangeDutyCycle(dutyCycle)
+    pwm1.ChangeDutyCycle(str(data['LED1']))
+    pwm2.ChangeDutyCycle(str(data['LED2']))
+    pwm3.ChangeDutyCycle(str(data['LED3']))
     time.sleep(.1)

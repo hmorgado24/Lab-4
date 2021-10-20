@@ -22,7 +22,7 @@ if (lednum == '3'):
 
 stats = {"LED1":L1, "LED2":L2, "LED3":L3}
 
-with open("cgicode.txt", 'w') as f:  
+with open("jsonstor.txt", 'w') as f:  
   json.dump(stats, f)
 
 print('Content-type: text/html\n\n')

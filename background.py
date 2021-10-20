@@ -23,7 +23,7 @@ pwm2.start(0)
 pwm3.start(0)
 
 while True:
-  with open("cgicode.txt", 'r') as f:
+  with open("jsonstor.txt", 'r') as f:
     pwm = json.load(f)
     pwm1.ChangeDutyCycle(float(pwm['LED1']))
     pwm2.ChangeDutyCycle(float(pwm['LED2']))

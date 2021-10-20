@@ -9,7 +9,7 @@ data = cgi.FieldStorage()
 
 L1 = data.getvalue('LED')
 s1 = data.getvalue('slider1')
-stats = {"LED":L1, 'slider1':s1}
+data = {"LED":L1, 'slider1':s1}
 
 with open("jsonstor.txt", 'w') as f:  
   json.dump(data, f)

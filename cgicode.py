@@ -31,20 +31,7 @@ print('<form action="/cgi-bin/cgicode.py" method="POST">')
 print('<body>') 
 
 
-if ('1' in data["LED"]):
-  GPIO.output(ledpin1, 1)
-  GPIO.output(ledpin2, 0)
-  GPIO.output(ledpin3, 0)
 
-if ('2' in data["LED"]):
-  GPIO.output(ledpin2, 1)
-  GPIO.output(ledpin1, 0)
-  GPIO.output(ledpin3, 0)
-
-if ('3' in data["LED"]):
-  GPIO.output(ledpin3, 1)
-  GPIO.output(ledpin1, 0)
-  GPIO.output(ledpin2, 0)
 
 print('<input type="radio" name="LED" value="1"> LED 1 <br>')
 print('<input type="radio" name="LED" value="2"> LED 2 <br>')

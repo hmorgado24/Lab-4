@@ -1,7 +1,6 @@
 #!/usr/bin/python37all
 import cgi
 import json
-import RPi.GPIO as GPIO
 
 import cgitb
 cgitb.enable()
@@ -24,7 +23,7 @@ if (LED == '3'):
 stats = {"LED1":L1, "LED2":L2, "LED3":L3}
 
 with open('cgicode.txt', 'w') as f:  
-  json.dump(stats,f)
+  json.dump(stats, f)
 
 print('Content-type: text/html\n\n')
 print('<html>')

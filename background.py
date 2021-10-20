@@ -12,6 +12,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledpin1, GPIO.OUT)
 GPIO.setup(ledpin2, GPIO.OUT)
 GPIO.setup(ledpin3, GPIO.OUT)
+GPIO.setwarnings(false)
 
 pwm1 = GPIO.PWM(ledpin1, 100)
 pwm2 = GPIO.PWM(ledpin2, 100)
@@ -23,7 +24,7 @@ pwm3.start(0)
 while True:
   with open("cgicode.txt", 'r') as f:
     data = json.load(f)
-    dutyCycle = str(data('slider1')) 
+    dutyCycle = float(data('slider1')) 
     led = str(data('LED'))
 
   if led == 1: 

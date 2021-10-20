@@ -12,7 +12,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledpin1, GPIO.OUT)
 GPIO.setup(ledpin2, GPIO.OUT)
 GPIO.setup(ledpin3, GPIO.OUT)
-GPIO.setwarnings(false)
+GPIO.setwarnings(False)
 
 pwm1 = GPIO.PWM(ledpin1, 100)
 pwm2 = GPIO.PWM(ledpin2, 100)

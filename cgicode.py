@@ -19,10 +19,10 @@ GPIO.setup(ledpin3, GPIO.OUT)
 data = cgi.FieldStorage()
 L1 = data.getvalue('LED')
 s1 = data.getvalue('slider1')
-data = {"LED":L1, "slider1":s1}
+stats = {"LED":L1, "slider1":s1}
 
 with open('cgicode.txt', 'w') as f:  
-  json.dump(data,f)
+  json.dump(stats,f)
 
 print('Content-type: text/html\n\n')
 print('<html>')

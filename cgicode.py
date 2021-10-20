@@ -29,7 +29,22 @@ print('<html>')
 print('<meta http-equiv="refresh" content="30">')
 print('<form action="/cgi-bin/cgicode.py" method="POST">')
 print('<body>') 
+
+
+if ('1' in data["LED"]):
+  GPIO.output(ledpin1, 1)
+
+if ('2' in data["LED"]):
+  GPIO.output(ledpin2, 1)
+
+if ('3' in data["LED"]):
+  GPIO.output(ledpin3, 1)
+
 print('<LED = " + data.getvalue("LED")><br>')
+print('<input type="radio" name="LED" value="1"> LED 1 <br>')
+print('<input type="radio" name="LED" value="2"> LED 2 <br>')
+print('<input type="radio" name="LED" value="3"> LED 3 <br>')
+
 print('<input type="range" name="slider1" min="0" max="100" value="%s"><br>' % s1)
 print('<input type="submit" value="Change LED Brightness">')
 print('</form>')

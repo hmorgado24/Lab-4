@@ -30,6 +30,8 @@ print('<meta http-equiv="refresh" content="30">')
 print('<form action="/cgi-bin/cgicode.py" method="POST">')
 print('<body>') 
 
+print('<LED Select = " + data.getvalue("LED")> <br>')
+
 if str(stats["LED"]) == 1:
   GPIO.output(ledpin1, 1)
 
@@ -39,7 +41,6 @@ if str(stats["LED"]) == 2:
 if str(stats["LED"]) == 3:
   GPIO.output(ledpin3, 1)
 
-print('<LED Select = " + data.getvalue("LED")> <br>')
 print('<input type="radio" name="LED" value="1"> LED 1 <br>')
 print('<input type="radio" name="LED" value="2"> LED 2 <br>')
 print('<input type="radio" name="LED" value="3"> LED 3 <br>')

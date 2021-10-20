@@ -26,14 +26,14 @@ while True:
     dutyCycle = str(data('slider1')) 
     led = str(data('LED'))
 
-  if led = 1: 
+  if led == 1: 
      pwm1.ChangeDutyCycle(dutyCycle)
      time.sleep(.1)
 
-  if led = 2: 
+  if led == 2: 
     pwm2.ChangeDutyCycle(dutyCycle)
     time.sleep(.1)
 
-  if led = 3: 
+  if led == 3: 
     pwm3.ChangeDutyCycle(dutyCycle)
     time.sleep(.1)

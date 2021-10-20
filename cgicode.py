@@ -6,25 +6,13 @@ import cgitb
 cgitb.enable()
 
 data = cgi.FieldStorage()
+
 L1 = data.getvalue('LED')
 s1 = data.getvalue('slider1')
-
-# L1 = 0
-# L2 = 0
-# L3 = 0
-
-# if (lednum == '1'):
-#   L1 = s1
-# if (lednum == '2'):
-#   L2 = s1
-# if (lednum == '3'):
-#   L3 = s1
-
-#stats = {"LED1":L1, "LED2":L2, "LED3":L3}
 stats = {"LED":L1, 'slider1':s1}
 
 with open("jsonstor.txt", 'w') as f:  
-  json.dump(stats, f)
+  json.dump(data, f)
 
 print('Content-type: text/html\n\n')
 print('<html>')

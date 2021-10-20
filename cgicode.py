@@ -6,8 +6,8 @@ import cgitb
 cgitb.enable()
 
 data = cgi.FieldStorage()
-# lednum = data.getvalue('LED')
-# s1 = data.getvalue('slider1')
+L1 = data.getvalue('LED')
+s1 = data.getvalue('slider1')
 
 # L1 = 0
 # L2 = 0

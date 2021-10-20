@@ -6,9 +6,9 @@ import RPi.GPIO as GPIO
 import cgitb
 cgitb.enable()
 
-ledpin1 = 19
-ledpin2 =
-ledpin3 = 
+ledpin1 = 13
+ledpin2 = 19
+ledpin3 = 26
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)

@@ -30,8 +30,6 @@ print('<html>')
 print('<meta http-equiv="refresh" content="30">')
 print('<form action="/cgi-bin/cgicode.py" method="POST">')
 print('<body>') 
-
-print('<LED Select = " + data.getvalue("LED")> <br>')
 print('<input type="radio" name="LED" value="1"> LED 1 <br>')
 print('<input type="radio" name="LED" value="2"> LED 2 <br>')
 print('<input type="radio" name="LED" value="3"> LED 3 <br>')

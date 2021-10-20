@@ -34,7 +34,5 @@ print('<input type="range" name="slider1" min="0" max="100" value="%s"><br>' % s
 print('<input type="submit" value="Change LED Brightness">')
 print('</form>')
 print('Brightness = %s' % s1)
-
-
 print('</body>')
 print('</html>')

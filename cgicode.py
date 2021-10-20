@@ -33,12 +33,11 @@ print('<body>')
 if str(data["LED"]) == 1:
   GPIO.output(ledpin1, 1)
 
-if str(data["LED"]) == 1:
+if str(data["LED"]) == 2:
   GPIO.output(ledpin2, 1)
 
-if ('3' in data["LED"]):
+if str(data["LED"]) == 3):
   GPIO.output(ledpin3, 1)
-
 
 
 print('<input type="radio" name="LED" value="1"> LED 1 <br>')

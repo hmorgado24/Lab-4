@@ -37,10 +37,6 @@ while True:
     if led == 3 :
       pwm3.ChangeDutyCycle(pwm)
       time.sleep(.1)
-  
-    # pwm1.ChangeDutyCycle(float(pwm["LED1"]))
-    # pwm2.ChangeDutyCycle(float(pwm["LED2"]))
-    # pwm3.ChangeDutyCycle(float(pwm["LED3"]))
 
 pwm1.stop()
 pwm2.stop()

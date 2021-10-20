@@ -43,7 +43,7 @@ print('<input type="radio" name="LED" value="1"> LED 1 <br>')
 print('<input type="radio" name="LED" value="2"> LED 2 <br>')
 print('<input type="radio" name="LED" value="3"> LED 3 <br>')
 print('<input type="submit" value="Submit"> <br> <br>')
-print('<LED Select = " + data.getvalue("LED") + data.getvalue("value")> <br>')
+print('<LED Select = " + data.getvalue("LED")> <br>')
 
 print('<input type="range" name="slider1" min="0" max="100" value="%s"><br>' % s1)
 print('<input type="submit" value="Change LED Brightness">')

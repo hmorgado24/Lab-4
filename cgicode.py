@@ -30,6 +30,14 @@ print('<meta http-equiv="refresh" content="30">')
 print('<form action="/cgi-bin/cgicode.py" method="POST">')
 print('<body>') 
 
+if ('1' in data["LED"]):
+  GPIO.output(ledpin1, 1)
+
+if ('2' in data["LED"]):
+  GPIO.output(ledpin2, 1)
+
+if ('3' in data["LED"]):
+  GPIO.output(ledpin3, 1)
 
 
 

@@ -25,7 +25,7 @@ pwm3.start(0)
 while True:
   with open("cgicode.txt", 'r') as f:
     data = json.load(f)
-    pwm1.ChangeDutyCycle(float(data['LED1']))
+    pwm1.ChangeDutyCycle(float(data["LED1"]))
     pwm2.ChangeDutyCycle(float(data['LED2']))
     pwm3.ChangeDutyCycle(float(data['LED3']))
     time.sleep(.1)
